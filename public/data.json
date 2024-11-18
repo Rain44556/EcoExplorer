@@ -1,0 +1,335 @@
+c
+    "image": "rainforest_trek.jpg",
+    "category": "Trekking",
+    "shortDescription": "Explore the lush rainforest canopy and its vibrant wildlife.",
+    "adventureCost": 150,
+    "bookingAvailability": true,
+    "location": "Amazon Rainforest, Brazil",
+    "duration": "3 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Professional guide",
+      "Camping gear",
+      "Meals and snacks"
+    ],
+    "ecoFriendlyFeatures": [
+      "Low-impact camping",
+      "Biodegradable supplies",
+      "Wildlife conservation donation"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Bring lightweight, waterproof clothing",
+      "Wear sturdy hiking boots",
+      "Insect repellent is essential"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Coral Reef Snorkeling",
+    "image": "coral_reef_snorkeling.jpg",
+    "category": "Water Adventure",
+    "shortDescription": "Discover the wonders of marine biodiversity in a pristine coral reef.",
+    "adventureCost": 90,
+    "bookingAvailability": true,
+    "location": "Great Barrier Reef, Australia",
+    "duration": "Half-day",
+    "adventureLevel": "Beginner",
+    "includedItems": [
+      "Snorkeling gear",
+      "Boat transportation",
+      "Marine biologist guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Eco-friendly sunscreen provided",
+      "Marine conservation support",
+      "Waste-free lunches"
+    ],
+    "maxGroupSize": 15,
+    "specialInstructions": [
+      "Avoid touching coral reefs",
+      "Wear eco-friendly swimwear",
+      "Stay hydrated"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Desert Stargazing Experience",
+    "image": "desert_stargazing.jpg",
+    "category": "Cultural Experience",
+    "shortDescription": "Immerse yourself in the tranquility of the desert under a starry sky.",
+    "adventureCost": 200,
+    "bookingAvailability": false,
+    "location": "Sahara Desert, Morocco",
+    "duration": "2 days",
+    "adventureLevel": "Easy",
+    "includedItems": [
+      "Camel ride",
+      "Traditional meals",
+      "Luxury desert camp"
+    ],
+    "ecoFriendlyFeatures": [
+      "Solar-powered camps",
+      "Locally sourced meals",
+      "Zero single-use plastics"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Bring warm clothing for night temperatures",
+      "Carry reusable water bottles",
+      "Respect local traditions"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Mountain Glacier Hike",
+    "image": "mountain_glacier_hike.jpg",
+    "category": "Hiking",
+    "shortDescription": "Conquer stunning glaciers and witness breathtaking alpine views.",
+    "adventureCost": 300,
+    "bookingAvailability": true,
+    "location": "Patagonia, Argentina",
+    "duration": "5 days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Professional mountaineering guide",
+      "Climbing equipment",
+      "Meals and lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave-no-trace policy",
+      "Renewable energy-powered lodges",
+      "Partnership with local conservation groups"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Wear layers for temperature changes",
+      "Use eco-friendly hiking boots",
+      "Carry a small medical kit"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mangrove Kayaking Expedition",
+    "image": "mangrove_kayaking.jpg",
+    "category": "Water Adventure",
+    "shortDescription": "Paddle through serene mangrove forests and spot rare wildlife.",
+    "adventureCost": 75,
+    "bookingAvailability": true,
+    "location": "Everglades, Florida, USA",
+    "duration": "1 day",
+    "adventureLevel": "Beginner",
+    "includedItems": [
+      "Kayak and paddle rental",
+      "Expert guide",
+      "Refreshments"
+    ],
+    "ecoFriendlyFeatures": [
+      "Eco-tour certified guides",
+      "Wildlife protection awareness",
+      "Minimal disturbance routes"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Carry eco-friendly bug repellent",
+      "Wear quick-dry clothing",
+      "Avoid littering in waterways"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Volcanic Cave Exploration",
+    "image": "volcanic_cave_exploration.jpg",
+    "category": "Caving",
+    "shortDescription": "Dive deep into ancient volcanic caves and learn their geology.",
+    "adventureCost": 120,
+    "bookingAvailability": true,
+    "location": "Iceland",
+    "duration": "Half-day",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Helmet with flashlight",
+      "Expert geologist guide",
+      "Safety gear"
+    ],
+    "ecoFriendlyFeatures": [
+      "Non-invasive exploration practices",
+      "Educational sessions on conservation",
+      "Sustainable travel to site"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Wear sturdy boots",
+      "Carry a small backpack",
+      "Follow safety instructions strictly"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Arctic Wildlife Safari",
+    "image": "arctic_wildlife_safari.jpg",
+    "category": "Wildlife Safari",
+    "shortDescription": "Witness polar bears, seals, and arctic foxes in their natural habitat.",
+    "adventureCost": 400,
+    "bookingAvailability": false,
+    "location": "Svalbard, Norway",
+    "duration": "3 days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Snowmobiles",
+      "Accommodation in eco-lodges",
+      "Meals and guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Carbon-neutral travel",
+      "Eco-lodge stays",
+      "Proceeds for polar conservation"
+    ],
+    "maxGroupSize": 6,
+    "specialInstructions": [
+      "Wear thermal layers",
+      "Use biodegradable toiletries",
+      "Avoid feeding wildlife"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Savannah Cycling Tour",
+    "image": "savannah_cycling_tour.jpg",
+    "category": "Cycling",
+    "shortDescription": "Cycle through stunning African savannahs and meet local tribes.",
+    "adventureCost": 180,
+    "bookingAvailability": true,
+    "location": "Serengeti, Tanzania",
+    "duration": "2 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Bicycles and helmets",
+      "Local guide",
+      "Picnic-style meals"
+    ],
+    "ecoFriendlyFeatures": [
+      "Non-motorized exploration",
+      "Collaboration with local communities",
+      "Eco-friendly camping"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Use high-SPF sunscreen",
+      "Stay hydrated",
+      "Follow guide instructions to avoid wildlife disturbances"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Mountain Gorilla Trekking",
+    "image": "gorilla_trekking.jpg",
+    "category": "Wildlife Safari",
+    "shortDescription": "Experience an intimate encounter with mountain gorillas in their natural habitat.",
+    "adventureCost": 600,
+    "bookingAvailability": true,
+    "location": "Bwindi Impenetrable Forest, Uganda",
+    "duration": "1 day",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Park permits",
+      "Expert trackers",
+      "Packed lunch"
+    ],
+    "ecoFriendlyFeatures": [
+      "Support for gorilla conservation",
+      "Locally guided tours",
+      "Minimal environmental impact practices"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Wear neutral clothing",
+      "Avoid strong scents",
+      "Follow guide instructions carefully"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Eco-Friendly Bamboo Rafting",
+    "image": "bamboo_rafting.jpg",
+    "category": "Water Adventure",
+    "shortDescription": "Float gently down a river surrounded by lush greenery.",
+    "adventureCost": 50,
+    "bookingAvailability": true,
+    "location": "Kanchanaburi, Thailand",
+    "duration": "4 hours",
+    "adventureLevel": "Beginner",
+    "includedItems": [
+      "Life jacket",
+      "Local guide",
+      "Snack pack"
+    ],
+    "ecoFriendlyFeatures": [
+      "Sustainably harvested bamboo rafts",
+      "Local community-run tours",
+      "Eco-conscious waste management"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Bring a change of clothes",
+      "Use biodegradable sunscreen",
+      "Keep electronics in waterproof bags"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Alpine Meadows Photography Tour",
+    "image": "alpine_photography_tour.jpg",
+    "category": "Photography",
+    "shortDescription": "Capture breathtaking views of alpine flora and fauna.",
+    "adventureCost": 180,
+    "bookingAvailability": true,
+    "location": "Swiss Alps, Switzerland",
+    "duration": "1 day",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Professional photographer guide",
+      "Transportation to sites",
+      "Lunch at a mountain lodge"
+    ],
+    "ecoFriendlyFeatures": [
+      "Non-motorized travel",
+      "Preservation of natural photography spots",
+      "Eco-friendly equipment recommendations"
+    ],
+    "maxGroupSize": 6,
+    "specialInstructions": [
+      "Carry lightweight camera gear",
+      "Dress in layers for changing weather",
+      "Avoid disturbing wildlife"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Coastal Cliff Camping",
+    "image": "coastal_cliff_camping.jpg",
+    "category": "Camping",
+    "shortDescription": "Camp on rugged cliffs with stunning ocean views.",
+    "adventureCost": 100,
+    "bookingAvailability": true,
+    "location": "Big Sur, California, USA",
+    "duration": "2 days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Tent and camping equipment",
+      "Eco-friendly meals",
+      "Hiking guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Solar-powered lighting",
+      "Waste separation and recycling",
+      "Locally sourced meals"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Pack warm clothing",
+      "Use reusable utensils",
+      "Stay away from cliff edges"
+    ]
+  }
+]

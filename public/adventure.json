@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "title": "Rainforest Canopy Trek",
+        "image": "rainforest_trek.jpg",
+        "ecoFriendlyFeatures": [
+            "Low-impact camping",
+            "Biodegradable supplies",
+            "Wildlife conservation donation"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Coral Reef Snorkeling",
+        "image": "coral_reef_snorkeling.jpg",
+        "ecoFriendlyFeatures": [
+            "Eco-friendly sunscreen provided",
+            "Marine conservation support",
+            "Waste-free lunches"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Desert Stargazing Experience",
+        "image": "desert_stargazing.jpg",
+        "ecoFriendlyFeatures": [
+            "Solar-powered camps",
+            "Locally sourced meals",
+            "Zero single-use plastics"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Mountain Glacier Hike",
+        "image": "mountain_glacier_hike.jpg",
+        "ecoFriendlyFeatures": [
+            "Leave-no-trace policy",
+            "Renewable energy-powered lodges",
+            "Partnership with local conservation groups"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Mangrove Kayaking Expedition",
+        "image": "mangrove_kayaking.jpg",
+        "ecoFriendlyFeatures": [
+            "Eco-tour certified guides",
+            "Wildlife protection awareness",
+            "Minimal disturbance routes"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Volcanic Cave Exploration",
+        "image": "volcanic_cave_exploration.jpg",
+        "ecoFriendlyFeatures": [
+            "Non-invasive exploration practices",
+            "Educational sessions on conservation",
+            "Sustainable travel to site"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Arctic Wildlife Safari",
+        "image": "arctic_wildlife_safari.jpg",
+        "ecoFriendlyFeatures": [
+            "Carbon-neutral travel",
+            "Eco-lodge stays",
+            "Proceeds for polar conservation"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Savannah Cycling Tour",
+        "image": "savannah_cycling_tour.jpg",
+        "ecoFriendlyFeatures": [
+            "Non-motorized exploration",
+            "Collaboration with local communities",
+            "Eco-friendly camping"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Mountain Gorilla Trekking",
+        "image": "gorilla_trekking.jpg",
+        "ecoFriendlyFeatures": [
+            "Support for gorilla conservation",
+            "Locally guided tours",
+            "Minimal environmental impact practices"
+        ]
+    }
+]

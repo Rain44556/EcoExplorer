@@ -8,6 +8,7 @@ import AdventureCards from './pages/AdventureCards'
 import AuthLayout from './layouts/AuthLayout'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import AuthProvider from './provider/AuthProvider'
 
 const router = createBrowserRouter([
 
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <AdventureCards></AdventureCards>,
-        loader: ()=> fetch('adventure.json')
+        loader: () => fetch('adventure.json')
       }
     ]
   },
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 )

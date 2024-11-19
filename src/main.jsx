@@ -9,6 +9,7 @@ import AuthLayout from './layouts/AuthLayout'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import AuthProvider from './provider/AuthProvider'
+import AdventureDetails from './pages/AdventureDetails'
 
 const router = createBrowserRouter([
 
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         loader: () => fetch('adventure.json')
       }
     ]
+  },
+  {
+    path: "/adventure/:id",
+    element: <AdventureDetails></AdventureDetails>,
+    loader: ()=> fetch('data.json')
   },
   {
     path: "/auth",

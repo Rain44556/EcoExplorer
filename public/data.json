@@ -1,4 +1,7 @@
-c
+[
+  {
+    "id": 1,
+    "title": "Rainforest Canopy Trek",
     "image": "rainforest_trek.jpg",
     "category": "Trekking",
     "shortDescription": "Explore the lush rainforest canopy and its vibrant wildlife.",

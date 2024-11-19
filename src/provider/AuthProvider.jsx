@@ -7,7 +7,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    const newUser = (email,password)=>{
+    const signUpUser = (email,password)=>{
         return createUserWithEmailAndPassword(auth,email,password)
     };
     const loginUser = (email,password)=>{
@@ -21,7 +21,7 @@ return signInWithEmailAndPassword(auth, email, password);
     const userInfo = {
         user,
         setUser,
-        newUser,
+        signUpUser,
         loginUser,
         signout,
     };

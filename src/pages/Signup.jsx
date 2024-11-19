@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Signup = () => {
-
     const { newUser, setUser } = useContext(AuthContext);
 
-    const handleSubmit = (e) => {
+    const handleSignUpSubmit = (e) => {
         e.preventDefault();
 
         const signUpForm = new FormData(e.target);
@@ -22,16 +21,17 @@ const Signup = () => {
                 // console.log(user);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
                 // console.log(errorCode,errorMessage);
+                alert(error.message);
             });
     }
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-50">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-md p-10 rounded-none">
                 <h1 className="font-semibold text-center text-3xl">Signup Form</h1>
-                <form onSubmit={handleSubmit} className="card-body ">
+                <form onSubmit={handleSignUpSubmit} className="card-body ">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>

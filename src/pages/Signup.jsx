@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const Signup = () => {
-    const { signUpUser, setUser, userProfileUpdate} = useContext(AuthContext);
+    const { signUpUser, setUser, userProfileUpdate, logInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState({});
+    const [showSuccess, setShowSuccess] = useState(false);
     const navigate = useNavigate()
 
     const handleSignUpSubmit = (e) => {
@@ -12,27 +14,40 @@ const Signup = () => {
 
         const signUpForm = new FormData(e.target);
         const name = signUpForm.get("name");
-        if(name.length < 4){
-            setError({...error, name: "Must be at least 4 characters!"})
+        const email = signUpForm.get("email");
+        const photo = signUpForm.get("photo");
+
+        const password = signUpForm.get("password");
+        setShowSuccess(false);
+        if (name.length > 6) {
+            setError({ ...error, password: "Must be at least 6 characters!!" })
+            return;
+        }
+        const checkUpperCase = /[A-z]/;
+        if(!checkUpperCase.test(password)){
+            setError({...error, password: 'Password must include at least one uppercase letter!'})
+        return;
+        }
+        const checkLowerCase = /[a-z]/;
+        if(!checkLowerCase.test(password)){
+            setError({...error, password: 'Password must include at least one lower letter!'})
         return;
         }
 
-        const email = signUpForm.get("email");
-        const photo = signUpForm.get("photo");
-        const password = signUpForm.get("password");
 
         signUpUser(email, password)
             .then((result) => {
                 const user = result.user;
                 setUser(user);
                 e.target.reset();
-                userProfileUpdate({displayName: name, photoURL: photo})
-                .then(()=>{
-                    navigate("/");
-                }).catch(err=>{
-                    //toast
-                    console.log(err);
-                });
+                setShowSuccess(true)
+                userProfileUpdate({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        navigate("/");
+                    }).catch(err => {
+                        //toast
+                        console.log(err);
+                    });
                 // console.log(user);
             })
             .catch((error) => {
@@ -40,7 +55,20 @@ const Signup = () => {
                 // const errorMessage = error.message;
                 // console.log(errorCode,errorMessage);
                 alert(error.message);
+                setShowSuccess(false);
             });
+    }
+
+    const handleLoginGoogle = () => {
+        logInWithGoogle()
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                navigate("/");
+            })
+            .catch((err) => {
+                setError({ ...error, googleLogin: err.code });
+            })
     }
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-50">
@@ -53,11 +81,7 @@ const Signup = () => {
                         </label>
                         <input name="name" type="text" placeholder="name" className="input input-bordered" required />
                     </div>
-                    {
-                        error.name && ( <label className="label text-red-700 text-sm font-medium">
-                           {error.name}
-                        </label>)
-                    }
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -71,11 +95,20 @@ const Signup = () => {
                         </label>
                         <input name="photo" type="text" placeholder="photo-url" className="input input-bordered" required />
                     </div>
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                        {
+                            error.password && (<label className="label text-red-700 text-sm font-medium">
+                                {error.password}
+                            </label>)
+                        }
+                        {
+                            showSuccess && <p className="text-green-800 text-sm mt-2 font-medium">Successfully Signup!!</p>
+                        }
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
@@ -85,6 +118,16 @@ const Signup = () => {
                     </div>
                 </form>
                 <p className="text-center font-medium">Already have an account? <Link className="text-green-700" to="/auth/login">Please Login!!</Link></p>
+                <p>
+                    <button onClick={handleLoginGoogle} className="btn btn-ghost border-green-500 w-full my-3"> <FaGoogle />Google</button>
+                </p>
+                {
+                    error.googleLogin && (
+                        <label className="label text-red-700 font-medium text-sm">
+                            {error.googleLogin}
+                        </label>
+                    )
+                }
             </div>
         </div>
     );

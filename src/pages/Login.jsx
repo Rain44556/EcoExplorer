@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const { loginUser, setUser, logInWithGoogle } = useContext(AuthContext);
@@ -14,10 +15,12 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+
         const loginForm = e.target;
         const email = loginForm.email.value;
         const password = loginForm.password.value;
         // console.log(email,password)
+
         loginUser(email, password)
             .then((result) => {
                 const user = result.user;
@@ -32,16 +35,16 @@ const Login = () => {
             })
     }
 
-    const handleLoginGoogle = ()=>{
+    const handleLoginGoogle = () => {
         logInWithGoogle()
-        .then((result) => {
-            const user = result.user;
-            setUser(user);
-            navigate("/");
-        })
-        .catch((err) => {
-            setError({ ...error, googleLogin: err.code });
-        })
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                navigate("/");
+            })
+            .catch((err) => {
+                setError({ ...error, googleLogin: err.code });
+            })
     }
 
 
@@ -83,8 +86,15 @@ const Login = () => {
                 </form>
                 <p className="text-center font-medium">Don't have an account? <Link className="text-green-700" to="/auth/signup">Sign up!!</Link></p>
                 <p>
-                    <button onClick={handleLoginGoogle} className="btn btn-ghost">Google</button>
+                    <button onClick={handleLoginGoogle} className="btn btn-ghost border-green-500 w-full my-3"> <FaGoogle />Google</button>
                 </p>
+                {
+                    error.googleLogin && (
+                        <label className="label text-red-700 font-medium text-sm">
+                            {error.googleLogin}
+                        </label>
+                    )
+                }
             </div>
         </div>
     );

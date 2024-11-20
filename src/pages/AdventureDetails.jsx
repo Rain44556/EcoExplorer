@@ -1,17 +1,16 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const AdventureDetails = () => {
     const { id } = useParams();
     const cardId = parseInt(id);
 
     const detailsData = useLoaderData();
+    // console.log(detailsData);
     const findCard = detailsData.find(card => (card.id) === cardId)
-    const {image, shortDescription, adventureCost, bookingAvailability, location, duration, adventureLevel, includedItems, maxGroupSize, specialInstructions, id: currentId } = findCard;
+    const {image, shortDescription, adventureCost, bookingAvailability, location, duration, adventureLevel, includedItems, maxGroupSize, specialInstructions } = findCard;
     // console.log(findCard);
     return (
         <div>
-            <nav className="w-10/12 mx-auto py-8"><Navbar></Navbar></nav>
             <main className="w-10/12 mx-auto grid grid-cols-6 gap-5">
                 <section className="col-span-4">
                     <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -31,7 +30,7 @@ const AdventureDetails = () => {
                             <p className="flex gap-20"><span className="font-semibold">Cost:</span> {adventureCost}</p>
                             <p className="flex gap-20"><span className="font-semibold">Booking Status:</span> {bookingAvailability === true ? "Available" : "Sorry! Not Available right now!"}</p>
                             <div className="card-actions">
-                                <Link to={"/"} className="btn w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">Talk With Expert</Link>
+                                <button to={"/"} className="btn w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">Talk With Expert</button>
                             </div>
                         </div>
                     </div>

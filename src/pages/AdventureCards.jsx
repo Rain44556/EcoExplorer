@@ -1,10 +1,16 @@
-import { Link, useLoaderData, } from "react-router-dom";
+// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link, } from "react-router-dom";
 
 const AdventureCards = () => {
-  const adventureCards = useLoaderData();
+  const [adventureCards, setAdventureCards] = useState([]);
+  useEffect(() =>{
+      fetch("./adventure.json")
+      .then(res => res.json())
+      .then(data => setAdventureCards(data))
+  },[])
+
   // console.log(adventureCards);
-
-
   return (
     <>
       <h1 className="text-center text-3xl font-bold py-5">Adventure Experiences</h1>
@@ -28,13 +34,14 @@ const AdventureCards = () => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <Link to={`/adventure/${adventure.id}`} className="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">
-                Explore Now
+              <Link to={`/adventure/${adventure.id}`} className="btn w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">
+              Explore Now
               </Link>
             </div>
           </div>
         ))}
       </div>
+
     </>
   );
 };

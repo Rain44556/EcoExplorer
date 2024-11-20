@@ -25,10 +25,12 @@ const Signup = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+                e.target.reset();
                 userProfileUpdate({displayName: name, photoURL: photo})
                 .then(()=>{
                     navigate("/");
                 }).catch(err=>{
+                    //toast
                     console.log(err);
                 });
                 // console.log(user);

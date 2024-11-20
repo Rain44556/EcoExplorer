@@ -4,12 +4,17 @@ import { AuthContext } from "../provider/AuthProvider";
 
 
 const Navbar = () => {
+    const { user, signout } = useContext(AuthContext);
     const navLinks = <>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/booklists">Update Profile</NavLink>
-
+        <NavLink to="/">Update Profile</NavLink>
+        {
+            user && <>
+             <NavLink to="/myProfile">MyProfile</NavLink>
+            </>
+        }
     </>
-    const { user, signout } = useContext(AuthContext);
+   
 
     return (
         <div className='flex justify-between items-center'>

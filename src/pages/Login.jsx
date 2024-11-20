@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-    const { loginUser, setUser } = useContext(AuthContext);
+    const { loginUser, setUser, logInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState({});
 
 
@@ -22,6 +22,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+                e.target.reset();
                 navigate(location?.state ? location.state : "/");
             })
             .catch((err) => {
@@ -29,6 +30,18 @@ const Login = () => {
                 // const errorMessage = error.message;
                 setError({ ...error, login: err.code });
             })
+    }
+
+    const handleLoginGoogle = ()=>{
+        logInWithGoogle()
+        .then((result) => {
+            const user = result.user;
+            setUser(user);
+            navigate("/");
+        })
+        .catch((err) => {
+            setError({ ...error, googleLogin: err.code });
+        })
     }
 
 
@@ -69,6 +82,9 @@ const Login = () => {
                     </div>
                 </form>
                 <p className="text-center font-medium">Don't have an account? <Link className="text-green-700" to="/auth/signup">Sign up!!</Link></p>
+                <p>
+                    <button onClick={handleLoginGoogle} className="btn btn-ghost">Google</button>
+                </p>
             </div>
         </div>
     );

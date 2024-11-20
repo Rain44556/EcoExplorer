@@ -11,6 +11,7 @@ import AuthProvider from './provider/AuthProvider'
 import AdventureDetails from './pages/AdventureDetails'
 import PrivateRoute from './PrivateRoute/PrivateRoute'
 import Home from './components/Home'
+import MyProfile from './components/MyProfile'
 
 const router = createBrowserRouter([
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "/adventure/:id",
         element:(<PrivateRoute><AdventureDetails></AdventureDetails></PrivateRoute>),
         loader: () => fetch('/data.json'),
+      },
+      {
+        path: "myProfile",
+        element:(<PrivateRoute><MyProfile></MyProfile></PrivateRoute>),
       },
     ]
   },

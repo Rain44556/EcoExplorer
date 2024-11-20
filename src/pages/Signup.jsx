@@ -1,15 +1,22 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Signup = () => {
-    const { signUpUser, setUser } = useContext(AuthContext);
+    const { signUpUser, setUser, userProfileUpdate} = useContext(AuthContext);
+    const [error, setError] = useState({});
+    const navigate = useNavigate()
 
     const handleSignUpSubmit = (e) => {
         e.preventDefault();
 
         const signUpForm = new FormData(e.target);
         const name = signUpForm.get("name");
+        if(name.length < 4){
+            setError({...error, name: "Must be at least 4 characters!"})
+        return;
+        }
+
         const email = signUpForm.get("email");
         const photo = signUpForm.get("photo");
         const password = signUpForm.get("password");
@@ -17,7 +24,13 @@ const Signup = () => {
         signUpUser(email, password)
             .then((result) => {
                 const user = result.user;
-                setUser(user)
+                setUser(user);
+                userProfileUpdate({displayName: name, photoURL: photo})
+                .then(()=>{
+                    navigate("/");
+                }).catch(err=>{
+                    console.log(err);
+                });
                 // console.log(user);
             })
             .catch((error) => {
@@ -38,6 +51,11 @@ const Signup = () => {
                         </label>
                         <input name="name" type="text" placeholder="name" className="input input-bordered" required />
                     </div>
+                    {
+                        error.name && ( <label className="label text-red-700 text-sm font-medium">
+                           {error.name}
+                        </label>)
+                    }
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>

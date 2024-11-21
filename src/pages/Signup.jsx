@@ -46,7 +46,7 @@ const Signup = () => {
                         navigate("/");
                     }).catch(err => {
                         //toast
-                        console.log(err);
+                        alert(err);
                     });
                 // console.log(user);
             })

@@ -7,13 +7,13 @@ const MyProfile = () => {
     const navigate = useNavigate();
 
     const handleUpdateProfile = () => {
-        navigate('/updateProfile');
+        navigate('/updatedProfile');
     }
 
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-green-100">
-            <h1 className="text-xl font-bold text-green-600 mb-6">
+            <h1 className="text-3xl font-bold text-green-600 mb-20">
                 Welcome, <span className="text-4xl  text-green-800">{user.displayName}!</span> Enjoy Your Stay
             </h1>
 

@@ -1,4 +1,4 @@
-import {  useContext } from 'react';
+import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
@@ -15,10 +15,10 @@ const ForgotPassword = () => {
 
     resetEmail(email).then((result) => {
       const user = result.user;
-                setUser(user);
+      setUser(user);
       alert('Password reset email sent! Redirecting to Gmail...');
-      // navigate( (location?.state && location.state.email) ? location.state.email : location.state);
-     navigate('https://mail.google.com');
+      navigate( (location?.state && location.state.email) ? location.state.email : location.state);
+      window.location.href('https://mail.google.com');
     })
       .catch((error) => {
         console.error('Error sending password reset email:', error.message);
@@ -39,7 +39,7 @@ const ForgotPassword = () => {
         <h2 className="text-2xl font-semibold text-green-800 text-center mb-6">
           Forgot Password
         </h2>
-        <form>
+        <form onSubmit={handlePasswordReset}>
           <div className="mb-4">
             <label
               htmlFor="email"
@@ -56,7 +56,6 @@ const ForgotPassword = () => {
           </div>
           <button
             type="button"
-            onClick={handlePasswordReset}
             className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
           >
             Reset Password

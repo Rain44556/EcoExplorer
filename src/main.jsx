@@ -11,8 +11,9 @@ import AuthProvider from './provider/AuthProvider'
 import AdventureDetails from './pages/AdventureDetails'
 import PrivateRoute from './PrivateRoute/PrivateRoute'
 import Home from './components/Home'
-import MyProfile from './components/MyProfile'
+import MyProfile from './pages/MyProfile'
 import ForgotPassword from './pages/ForgotPassword'
+import UpdateProfile from './pages/UpdateProfile'
 
 const router = createBrowserRouter([
 
@@ -34,8 +35,8 @@ const router = createBrowserRouter([
         element:(<PrivateRoute><MyProfile></MyProfile></PrivateRoute>),
       },
       {
-        path: "/updateProfile",
-        element:<h1>update</h1>,
+        path: "/updatedProfile",
+        element:<UpdateProfile></UpdateProfile>
       }
     ]
   },

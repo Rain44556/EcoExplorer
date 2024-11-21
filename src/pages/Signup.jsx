@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Signup = () => {
     const { signUpUser, setUser, userProfileUpdate, logInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState({});
     const [showSuccess, setShowSuccess] = useState(false);
+    const [showPasswordIcon, setShowPasswordIcon] = useState(false);
     const navigate = useNavigate()
 
     const handleSignUpSubmit = (e) => {
@@ -24,14 +25,14 @@ const Signup = () => {
             return;
         }
         const checkUpperCase = /[A-z]/;
-        if(!checkUpperCase.test(password)){
-            setError({...error, password: 'Password must include at least one uppercase letter!'})
-        return;
+        if (!checkUpperCase.test(password)) {
+            setError({ ...error, password: 'Password must include at least one uppercase letter!' })
+            return;
         }
         const checkLowerCase = /[a-z]/;
-        if(!checkLowerCase.test(password)){
-            setError({...error, password: 'Password must include at least one lower letter!'})
-        return;
+        if (!checkLowerCase.test(password)) {
+            setError({ ...error, password: 'Password must include at least one lower letter!' })
+            return;
         }
 
 
@@ -39,7 +40,6 @@ const Signup = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                e.target.reset();
                 setShowSuccess(true)
                 userProfileUpdate({ displayName: name, photoURL: photo })
                     .then(() => {
@@ -96,11 +96,21 @@ const Signup = () => {
                         <input name="photo" type="text" placeholder="photo-url" className="input input-bordered" required />
                     </div>
 
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                        <input name="password"
+                            type={showPasswordIcon ? 'text' : 'password'}
+                            placeholder="password"
+                            className="input input-bordered"
+                            required />
+
+                        <button onClick={() => setShowPasswordIcon(!showPasswordIcon)}
+                            className="btn btn-ghost btn-sm absolute right-4 top-11">
+                            {showPasswordIcon ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                        </button>
+
                         {
                             error.password && (<label className="label text-red-700 text-sm font-medium">
                                 {error.password}
@@ -113,6 +123,7 @@ const Signup = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+
                     <div className="form-control mt-6">
                         <button className="btn bg-green-500">Signup</button>
                     </div>

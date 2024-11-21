@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const { loginUser, setUser, logInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState({});
+    const [showPasswordIcon, setShowPasswordIcon] = useState(false);
 
 
     const location = useLocation();
@@ -25,7 +26,6 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                e.target.reset();
                 navigate(location?.state ? location.state : "/");
             })
             .catch((err) => {
@@ -47,6 +47,10 @@ const Login = () => {
             })
     }
 
+    const handleForgotPass = ()=>{
+        navigate('/auth/forgotPass');
+    }
+
 
 
     return (
@@ -62,12 +66,21 @@ const Login = () => {
                         <input name="email" type="email" placeholder="email" className="input input-bordered" required />
                     </div>
 
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
+                        <input name="password" 
+                                type={showPasswordIcon ? 'tyext' : 'password'}
+                                placeholder="password" 
+                                className="input input-bordered" 
+                                required />
+                        
+                        <button onClick={()=> setShowPasswordIcon(!showPasswordIcon)} 
+                                className="btn btn-ghost btn-sm absolute right-4 top-11">
+                               { showPasswordIcon ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                                </button>
 
-                        <input name="password" type="password" placeholder="password" className="input input-bordered" required />
                         {
                             error.login && (
                                 <label className="label text-red-700 font-medium text-sm">
@@ -76,7 +89,7 @@ const Login = () => {
                             )
                         }
                         <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <button onClick={handleForgotPass} className="label-text-alt link link-hover">Forgot password?</button>
                         </label>
                     </div>
 

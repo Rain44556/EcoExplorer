@@ -12,6 +12,7 @@ import AdventureDetails from './pages/AdventureDetails'
 import PrivateRoute from './PrivateRoute/PrivateRoute'
 import Home from './components/Home'
 import MyProfile from './components/MyProfile'
+import ForgotPassword from './pages/ForgotPassword'
 
 const router = createBrowserRouter([
 
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         loader: () => fetch('/data.json'),
       },
       {
-        path: "myProfile",
+        path: "/myProfile",
         element:(<PrivateRoute><MyProfile></MyProfile></PrivateRoute>),
       },
     ]
@@ -44,9 +45,13 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
+        path: "/auth/forgotPass",
+        element: <ForgotPassword></ForgotPassword>
+      },
+      {
         path: '/auth/signup',
         element: <Signup></Signup>
-      }
+      },
     ]
   },
   {

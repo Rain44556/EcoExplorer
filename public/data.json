@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Rainforest Canopy Trek",
-    "image": "rainforest_trek.jpg",
+    "image": "https://i.ibb.co.com/XpdQcjQ/asian-woman-enjoying-outdoor-trip.jpg",
     "category": "Trekking",
     "shortDescription": "Explore the lush rainforest canopy and its vibrant wildlife.",
     "adventureCost": 150,
@@ -30,7 +30,7 @@
   {
     "id": 2,
     "title": "Coral Reef Snorkeling",
-    "image": "coral_reef_snorkeling.jpg",
+    "image": "https://i.ibb.co.com/MsNwZLV/portrait-scuba-diver-sea-water-with-marine-life.jpg",
     "category": "Water Adventure",
     "shortDescription": "Discover the wonders of marine biodiversity in a pristine coral reef.",
     "adventureCost": 90,
@@ -58,7 +58,7 @@
   {
     "id": 3,
     "title": "Desert Stargazing Experience",
-    "image": "desert_stargazing.jpg",
+    "image": "https://i.ibb.co.com/vwDhw5V/camels-sleep-starry-sky-sahara-desert.jpg",
     "category": "Cultural Experience",
     "shortDescription": "Immerse yourself in the tranquility of the desert under a starry sky.",
     "adventureCost": 200,
@@ -86,7 +86,7 @@
   {
     "id": 4,
     "title": "Mountain Glacier Hike",
-    "image": "mountain_glacier_hike.jpg",
+    "image": "https://i.ibb.co.com/Zm9HGym/man-black-jacket-brown-backpack-standing-foggy-forest.jpg",
     "category": "Hiking",
     "shortDescription": "Conquer stunning glaciers and witness breathtaking alpine views.",
     "adventureCost": 300,
@@ -114,7 +114,7 @@
   {
     "id": 5,
     "title": "Mangrove Kayaking Expedition",
-    "image": "mangrove_kayaking.jpg",
+    "image": "https://i.ibb.co.com/0XDZpYY/smiling-man-splashing-water-while-paddling-kayak-lake.jpg",
     "category": "Water Adventure",
     "shortDescription": "Paddle through serene mangrove forests and spot rare wildlife.",
     "adventureCost": 75,
@@ -142,7 +142,7 @@
   {
     "id": 6,
     "title": "Volcanic Cave Exploration",
-    "image": "volcanic_cave_exploration.jpg",
+    "image": "https://i.ibb.co.com/MBpwRX6/beautiful-medieval-fantasy-landscape.jpg",
     "category": "Caving",
     "shortDescription": "Dive deep into ancient volcanic caves and learn their geology.",
     "adventureCost": 120,
@@ -169,8 +169,7 @@
   },
   {
     "id": 7,
-    "title": "Arctic Wildlife Safari",
-    "image": "arctic_wildlife_safari.jpg",
+    "image": "https://i.ibb.co.com/P4t8zT9/eskimo-people-living-extreme-weather-condition.jpg",
     "category": "Wildlife Safari",
     "shortDescription": "Witness polar bears, seals, and arctic foxes in their natural habitat.",
     "adventureCost": 400,
@@ -198,7 +197,7 @@
   {
     "id": 8,
     "title": "Savannah Cycling Tour",
-    "image": "savannah_cycling_tour.jpg",
+    "image": "https://i.ibb.co.com/NpzGWN3/full-shot-family-cycling-outdoors.jpg",
     "category": "Cycling",
     "shortDescription": "Cycle through stunning African savannahs and meet local tribes.",
     "adventureCost": 180,
@@ -226,7 +225,7 @@
   {
     "id": 9,
     "title": "Mountain Gorilla Trekking",
-    "image": "gorilla_trekking.jpg",
+    "image": "https://i.ibb.co.com/0KM9Z6d/side-view-woman-holding-monkey.jpg",
     "category": "Wildlife Safari",
     "shortDescription": "Experience an intimate encounter with mountain gorillas in their natural habitat.",
     "adventureCost": 600,

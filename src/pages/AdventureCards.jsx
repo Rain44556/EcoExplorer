@@ -18,14 +18,14 @@ const AdventureCards = () => {
         {adventureCards.map((adventure) => (
           <div
             key={adventure.id}
-            className="border rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            className="border p-5 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl text-center font-bold text-green-700 py-4">
               {adventure.title}
             </h2>
             <img
               src={adventure.image}
-              alt={adventure.title}
+              
               className="w-full h-48 object-cover"
             />
             <div className="p-4">

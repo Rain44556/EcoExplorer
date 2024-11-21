@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Rainforest Canopy Trek",
-        "image": "rainforest_trek.jpg",
+        "image": "https://i.ibb.co.com/XpdQcjQ/asian-woman-enjoying-outdoor-trip.jpg",
         "ecoFriendlyFeatures": [
             "Low-impact camping",
             "Biodegradable supplies",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "title": "Coral Reef Snorkeling",
-        "image": "coral_reef_snorkeling.jpg",
+        "image": "https://i.ibb.co.com/MsNwZLV/portrait-scuba-diver-sea-water-with-marine-life.jpg",
         "ecoFriendlyFeatures": [
             "Eco-friendly sunscreen provided",
             "Marine conservation support",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "title": "Desert Stargazing Experience",
-        "image": "desert_stargazing.jpg",
+        "image": "https://i.ibb.co.com/vwDhw5V/camels-sleep-starry-sky-sahara-desert.jpg",
         "ecoFriendlyFeatures": [
             "Solar-powered camps",
             "Locally sourced meals",
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "title": "Mountain Glacier Hike",
-        "image": "mountain_glacier_hike.jpg",
+        "image": "https://i.ibb.co.com/Zm9HGym/man-black-jacket-brown-backpack-standing-foggy-forest.jpg",
         "ecoFriendlyFeatures": [
             "Leave-no-trace policy",
             "Renewable energy-powered lodges",
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "title": "Mangrove Kayaking Expedition",
-        "image": "mangrove_kayaking.jpg",
+        "image": "https://i.ibb.co.com/0XDZpYY/smiling-man-splashing-water-while-paddling-kayak-lake.jpg",
         "ecoFriendlyFeatures": [
             "Eco-tour certified guides",
             "Wildlife protection awareness",
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "title": "Volcanic Cave Exploration",
-        "image": "volcanic_cave_exploration.jpg",
+        "image": "https://i.ibb.co.com/MBpwRX6/beautiful-medieval-fantasy-landscape.jpg",
         "ecoFriendlyFeatures": [
             "Non-invasive exploration practices",
             "Educational sessions on conservation",
@@ -62,7 +62,7 @@
     {
         "id": 7,
         "title": "Arctic Wildlife Safari",
-        "image": "arctic_wildlife_safari.jpg",
+        "image": "https://i.ibb.co.com/P4t8zT9/eskimo-people-living-extreme-weather-condition.jpg",
         "ecoFriendlyFeatures": [
             "Carbon-neutral travel",
             "Eco-lodge stays",
@@ -72,7 +72,7 @@
     {
         "id": 8,
         "title": "Savannah Cycling Tour",
-        "image": "savannah_cycling_tour.jpg",
+        "image": "https://i.ibb.co.com/NpzGWN3/full-shot-family-cycling-outdoors.jpg",
         "ecoFriendlyFeatures": [
             "Non-motorized exploration",
             "Collaboration with local communities",
@@ -82,7 +82,7 @@
     {
         "id": 9,
         "title": "Mountain Gorilla Trekking",
-        "image": "gorilla_trekking.jpg",
+        "image": "https://i.ibb.co.com/0KM9Z6d/side-view-woman-holding-monkey.jpg",
         "ecoFriendlyFeatures": [
             "Support for gorilla conservation",
             "Locally guided tours",

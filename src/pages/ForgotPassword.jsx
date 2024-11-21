@@ -1,23 +1,20 @@
-import { useContext } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useContext, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const ForgotPassword = () => {
   const { setUser, resetEmail } = useContext(AuthContext);
   const location = useLocation();
-  const navigate = useNavigate();
+  const emailRef = useRef();
 
-  const handlePasswordReset = (e) => {
-    e.preventDefault();
-
-    const resetForm = e.target;
-    const email = resetForm.email.value;
+  const handlePasswordReset = () => {
+    // const resetForm = e.target;
+    const email = emailRef.current.value;
 
     resetEmail(email).then((result) => {
       const user = result.user;
       setUser(user);
       alert('Password reset email sent! Redirecting to Gmail...');
-      navigate( (location?.state && location.state.email) ? location.state.email : location.state);
       window.location.href('https://mail.google.com');
     })
       .catch((error) => {
@@ -39,7 +36,8 @@ const ForgotPassword = () => {
         <h2 className="text-2xl font-semibold text-green-800 text-center mb-6">
           Forgot Password
         </h2>
-        <form onSubmit={handlePasswordReset}>
+        <form 
+           onSubmit={handlePasswordReset}>
           <div className="mb-4">
             <label
               htmlFor="email"
@@ -49,7 +47,8 @@ const ForgotPassword = () => {
             </label>
             <input
               type="email"
-              id="email"
+              ref={emailRef}
+              defaultValue={location?.state?.email || ""}
               placeholder="Enter your email"
               className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
             />

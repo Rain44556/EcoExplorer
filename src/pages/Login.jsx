@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
@@ -47,8 +47,10 @@ const Login = () => {
             })
     }
 
+    const emailRef = useRef();
     const handleForgotPass = ()=>{
-        navigate('/auth/forgotPass');
+        const email = emailRef.current.value;
+        navigate('/auth/forgotPass', {state: {email}});
     }
 
 
@@ -63,7 +65,7 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                        <input name="email" type="email" ref={emailRef} placeholder="email" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control relative">

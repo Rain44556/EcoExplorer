@@ -45,7 +45,7 @@ function closeModal() {
         const presentTime = new Date();
         const presentHour = presentTime.getHours();
 
-        if(presentHour >= 10 && presentHour <= 12){
+        if(presentHour >= 10 && presentHour <= 20){
             window.open("https://meet.google.com/tej-noyn-hxj");
         }else{
             openModal(); 

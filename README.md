@@ -1,8 +1,21 @@
-# React + Vite
+# project name: EcoExplorer
+* live URL: https://ecoexplorer-8be65.web.app/ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ # Purpose
+ * Inspiring and educating visitors about environmentally sustainable travel and outdoor activities is the purpose of an Eco Explorer Adventure website. For those who want to explore the outdoors, take part in ecotourism, and do things that promote environmental awareness and conservation, these websites usually work as platforms.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ # key features:
+ 
+ * Homepage with Stunning Visuals
+ * Adventure Listings/Directory
+ * Newsletter and Email Subscription
+ * Social Media Integration
+ 
+ # npm packages have used:
+ * Tailwind CSS
+ * DaisyUI
+ * React Router DOM
+ * Firebase 
+ * React Icons
+ * React MOdal
+ * React Tostify

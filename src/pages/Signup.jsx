@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Signup = () => {
     const { signUpUser, setUser, userProfileUpdate, logInWithGoogle } = useContext(AuthContext);
@@ -17,10 +18,10 @@ const Signup = () => {
         const name = signUpForm.get("name");
         const email = signUpForm.get("email");
         const photo = signUpForm.get("photo");
-
         const password = signUpForm.get("password");
         setShowSuccess(false);
-        if (name.length > 6) {
+
+        if (password.length > 6) {
             setError({ ...error, password: "Must be at least 6 characters!!" })
             return;
         }
@@ -54,7 +55,7 @@ const Signup = () => {
                 // const errorCode = error.code;
                 // const errorMessage = error.message;
                 // console.log(errorCode,errorMessage);
-                alert(error.message);
+                toast.error(error.message);
                 setShowSuccess(false);
             });
     }

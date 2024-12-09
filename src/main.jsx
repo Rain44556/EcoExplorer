@@ -17,9 +17,11 @@ import UpdateProfile from './pages/UpdateProfile'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const router = createBrowserRouter([
 
   {
+  
     path: "/",
     element: <HomeLayout></HomeLayout>,
     children: [

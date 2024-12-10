@@ -13,8 +13,20 @@
     },
     {
         "id": 3,
-        "title": "Solar-Powered Charger",
-        "image": "https://i.ibb.co.com/vjTVRDC/71q-UURVf0w-L-AC-SX679.jpg",
-        "description": "Charge your devices sustainably with solar energy."
+        "title": "Bamboo Travel Utensil Set",
+        "image": "https://i.ibb.co.com/YkFkrFm/travel-cutlery-bamboo-grande.webp",
+        "description": "Fork, knife, spoon, and chopsticks in a compact pouch."
+    },
+    {
+        "id": 4,
+        "title": "Solar Lanterns",
+        "image": "https://i.ibb.co.com/fkCRYmb/61-Pcz-QTex-L-AC-UF894-1000-QL80.jpg",
+        "description": "Rechargeable, collapsible lanterns for camping trips."
+    },
+    {
+        "id": 5,
+        "title": "Hemp Hats",
+        "image": "https://i.ibb.co.com/QrtGyg9/H-TSOPRH-NAT-0a-grande.webp",
+        "description": "Durable and eco-friendly fashion."
     }
 ]

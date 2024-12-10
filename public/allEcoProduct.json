@@ -52,5 +52,12 @@
         "title": "Bamboo Toothbrushes",
         "image": "https://i.ibb.co.com/VHFtFCQ/images.jpg",
         "description": "Biodegradable handles."
+    },
+    
+    {
+        "id": 10,
+        "title": "Solar-Powered Charger",
+        "image": "https://i.ibb.co.com/vjTVRDC/71q-UURVf0w-L-AC-SX679.jpg",
+        "description": "Charge your devices sustainably with solar energy."
     }
 ]

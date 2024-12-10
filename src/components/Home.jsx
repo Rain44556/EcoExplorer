@@ -1,6 +1,5 @@
 import AdventureCards from "../pages/AdventureCards";
 import Banner from "./Banner";
-import Newsletter from "./NewsLetter";
 import EcoProducts from "./EcoProducts";
 
 const Home = () => {
@@ -9,7 +8,7 @@ const Home = () => {
             <Banner></Banner>
             <AdventureCards></AdventureCards>
             <EcoProducts></EcoProducts>
-            <Newsletter></Newsletter>
+
         </div>
     );
 };

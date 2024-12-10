@@ -27,8 +27,8 @@ const AllEcoProducts = () => {
                 alt="Reusable Bottle"
                 className="w-52 object-cover h-56 mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-sm font-semibold text-green-800 mb-2 font-titleFont">{product.title}</h3>
+              <p className="text-gray-500 mb-4 text-sm">
               {product.description}
               </p>
             </div>

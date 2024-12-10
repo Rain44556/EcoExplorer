@@ -1,14 +1,14 @@
 import AdventureCards from "../pages/AdventureCards";
-import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import Newsletter from "./NewsLetter";
+import EcoProducts from "./EcoProducts";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <AdventureCards></AdventureCards>
-            <AboutUs></AboutUs>
+            <EcoProducts></EcoProducts>
             <Newsletter></Newsletter>
         </div>
     );

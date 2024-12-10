@@ -13,7 +13,7 @@ const AdventureCards = () => {
   // console.log(adventureCards);
   return (
     <>
-      <h1 className="text-center text-3xl font-bold py-5">Adventure Experiences</h1>
+      <h1 className="text-center text-3xl font-bold py-10 font-titleFont">Adventure Experiences</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {adventureCards.map((adventure) => (
           <div

@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         MontserratFamily: [ "Montserrat", "sans-serif"],
+        titleFont: ["Playfair Display", "serif"],
       }
     },
   },

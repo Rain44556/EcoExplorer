@@ -16,6 +16,7 @@ import ForgotPassword from './pages/ForgotPassword'
 import UpdateProfile from './pages/UpdateProfile'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import AllEcoProducts from './pages/AllEcoProducts'
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/updatedProfile",
         element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path: "/allEcoProducts",
+        element:<PrivateRoute><AllEcoProducts></AllEcoProducts></PrivateRoute>
       }
     ]
   },

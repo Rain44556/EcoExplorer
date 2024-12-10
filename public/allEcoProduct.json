@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Reusable Food Wraps",
+        "image": "https://i.ibb.co.com/zZXZJhd/719n-Fk0jz-XL-AC-SX300-SY300-QL70-FMwebp.webp",
+        "description": "Beeswax wraps for storing snacks during travel."
+    },
+    {
+         "id": 2, 
+        "title": "Eco-Friendly Tents",
+        "image": "https://i.ibb.co.com/6D6fwj0/Image-by-Vaude-eco-friendly-tents-2.jpg",
+        "description": "Lightweight and made with sustainable materials."
+    },
+    {
+        "id": 3, 
+        "title": "Reusable Coffee Cups",
+        "image": "https://i.ibb.co.com/nC0dRcw/71xie-P4pc-GL-AC-SX300-SY300-QL70-FMwebp.webp",
+        "description": "Insulated mugs for camping or travel."
+    },
+    {
+        "id": 4, 
+        "title": "Eco-Friendly Sneakers",
+        "image": "https://i.ibb.co.com/51PGxPx/81-Mbw-Ato-AML-AC-SY695.jpg",
+        "description": "Shoes made from recycled plastic or plant-based materials."
+    },
+    {
+        "id": 5, 
+        "title": "Recycled Plastic Phone Cases",
+        "image": "https://i.ibb.co.com/Yyc80f3/GZWPHONECASES2-2-min.jpg",
+        "description": "Stylish and sustainable phone cases."
+    },
+    {
+        "id": 6, 
+        "title": "Eco-Friendly Bluetooth Speakers",
+        "image": "https://i.ibb.co.com/w6S6v8j/e2d7a0a4-e038-4a0c-8ea8-fef74600ff40-2.jpg",
+        "description": "Made from bamboo or recycled materials."
+    },
+    {
+        "id": 7,
+        "title": "Solar-Powered Flashlights",
+        "image": "https://i.ibb.co.com/8PJ3ZYL/0002032-portable-solar-flashlight-with-side-light-for-outdoor-use-415.jpg",
+        "description": "Ideal for outdoor explorers."
+    },
+    { 
+        "id": 8,
+        "title": "Natural Sunscreen",
+        "image": "https://i.ibb.co.com/wyy849L/3.webp",
+        "description": "Reef-safe and eco-conscious ingredients."
+    },
+    {
+        "id": 9,
+        "title": "Bamboo Toothbrushes",
+        "image": "https://i.ibb.co.com/VHFtFCQ/images.jpg",
+        "description": "Biodegradable handles."
+    }
+]

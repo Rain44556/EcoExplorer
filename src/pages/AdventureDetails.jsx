@@ -1,6 +1,6 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Modal from 'react-modal';
-import React from "react";
+import  { useState } from "react";
 
 const AdventureDetails = () => {
     const { id } = useParams();
@@ -15,7 +15,7 @@ const AdventureDetails = () => {
 
 
     //Talk with expert modal
-    const [modalIsOpen, setModalIsOpen] = React.useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const customStyles = {
         content: {

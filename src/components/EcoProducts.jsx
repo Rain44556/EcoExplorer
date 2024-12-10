@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const EcoProducts = () => {
@@ -10,7 +11,7 @@ const EcoProducts = () => {
       .then(data => setProducts(data))
   },[])
 
-  
+
   return (
 <>
 
@@ -28,7 +29,7 @@ const EcoProducts = () => {
   products.map((product) =>(
     <div 
     key={product.id}
-    className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+    className="bg-green-100 shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
         <img
           src={product.image}
           alt="Reusable Bottle"
@@ -43,9 +44,9 @@ const EcoProducts = () => {
 }
     </div>
     <div className="text-center mt-12">
-      <button className="bg-green-600 text-white px-6 py-3 text-lg rounded-lg shadow-lg hover:bg-green-700 transition w-full">
-        View All Products
-      </button>
+      <Link to={"/allEcoProducts"} className="btn w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">
+              All Products
+              </Link>
     </div>
   </div>
 </section>
